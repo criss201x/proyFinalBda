@@ -1,0 +1,46 @@
+<div class="container p-4">
+    <div class="row">
+        {{!--cambiar por tabla con datos  --}}
+        <label for="titu">lista de pacientes</label>
+        <table class="table table-hovered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">nombre</th>
+                    <th scope="col">apellido</th>
+                    <th scope="col">edad</th>
+                    <th scope="col">direccion</th>
+                    <th scope="col">id municipio</th>
+                    <th scope="col">tipo de id</th>                    
+                    <th scope="col">estado</th>                                        
+                    <th scope="col">opciones</th>                    
+                </tr>
+            </thead>
+          {{#each pacientes}}  
+            <tbody>                
+                <tr>
+                    <th>{{id}}</th>
+                    <td>{{nombre}}</td>
+                    <td>{{apellido}}</td>
+                    <td>{{timeago fecha_nto}}</td>
+                    <td>{{direccion}}</td>
+                    <td>{{id_municipio}}</td>
+                    <td>{{id_tipo_id}}</td>
+                    <td>{{id_estado}}</td>
+                    <td>
+                        <a href="/pacientes/edit/{{id}}" class="class btn btn-secondary">editar </a>
+                        <a href="/pacientes/delete/{{id}}" class="btn btn-danger">borrar </a>                        
+                    </td>
+                </tr>
+            {{else }}
+            </tbody>
+        </table>        
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>la lista esta vacia </p>
+                <a href="/pacientes/add">ingresar nuevo</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

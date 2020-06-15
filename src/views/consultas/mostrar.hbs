@@ -1,0 +1,27 @@
+<div class="container p-4">
+    <div class="row">
+        {{!--cambiar por tabla con datos  --}}
+        <label for="titu">consulta 1 </label>
+        <table class="table table-hovered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">numero de hospitalizacion</th>        
+                </tr>
+            </thead>
+          {{#each consulta1}}  
+            <tbody>                
+                <tr>
+                    <td>{{id_hospitalizacion}}</td>
+                </tr>
+            {{else }}
+            </tbody>
+        </table>        
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay hospitalizaciones </p>
+             {{!--   <a href="/links/add">ingresar nuevo</a>--}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

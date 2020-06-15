@@ -1,0 +1,45 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card ">
+                <div class="card-body">
+                    <form action="/pacientes/add" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="id" placeholder="identificacion" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="nombre" placeholder="nombre" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="apellido" placeholder="apellido" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" data-date="" data-date-format="DD MMMM YYYY" class="form-control" name="fecha_nto"
+                                placeholder="fecha nacimiento" autofocus >
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="direccion" placeholder="direccion" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="id_municipio" placeholder="id municipio"
+                                autofocus min="11101" max="11114">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="id_tipo_id" placeholder="tipo de id"
+                                autofocus min="1100001" max="1100004">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="id_estado" placeholder="estado del paciente"
+                                autofocus min="5007" max="5008">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

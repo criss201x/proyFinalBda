@@ -1,0 +1,52 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card ">
+                <div class="card-body">
+                    <form action="/pacientes/edit/{{pacientee.id}}" method="POST">
+                        <div class="form-group">
+                            <input type="text" value="{{pacientee.id}}" class="form-control" name="id"
+                                placeholder="identificacion nueva" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{pacientee.nombre}}" class="form-control" name="nombre"
+                                placeholder="nombre nuevo" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{pacientee.apellido}}" class="form-control" name="apellido"
+                                placeholder="apellido nuevo" autofocus>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="date" data-date="" data-date-format="DD MMMM YYYY"
+                                value="{{pacientee.fecha_nto}}" class="form-control" name="fecha_nto"
+                                placeholder="id especialidad" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{pacientee.direccion}}" class="form-control" name="direccion"
+                                placeholder="direccion" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" value="{{pacientee.id_municipio}}" class="form-control"
+                                name="id_municipio" placeholder="id municipio" autofocus min="11101" max="11114">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" value="{{pacientee.id_tipo_id}}" class="form-control" name="id_tipo_id"
+                                placeholder="tipo de id" autofocus min="1100001" max="1100004">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" value="{{pacientee.id_estado}}" class="form-control" name="id_estado"
+                                placeholder="tipo de id" autofocus min="5007" max="5008">
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                actualizar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
